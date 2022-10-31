@@ -65,6 +65,17 @@ void right(double x){
 void left(double x){
   Motor1.setSpeed(0);
   Motor2.setSpeed(0);
+   Motor1.run(BRAKE);
+  Motor2.run(BRAKE);
+  Motor1.setSpeed(SX);
+  Motor2.setSpeed(DX);
+  Motor2.run(FORWARD);
+  Motor1.run(BACKWARD);
+  delay(viewAngleTime * (x * -1) + 1);
+  Motor1.setSpeed(0);
+  Motor2.setSpeed(0);
+  Motor1.run(BRAKE);
+  Motor2.run(BRAKE);
 }
 
 void brake(){
