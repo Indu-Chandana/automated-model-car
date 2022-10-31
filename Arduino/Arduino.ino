@@ -74,7 +74,10 @@ void back(){
 }
 
 
-
+void setup() {
+  Serial.begin(115200);
+  Serial.setTimeout(5);
+}
 void loop() {
   if(Serial.available() > 0){
      a = Serial.readString(); 
