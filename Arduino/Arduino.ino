@@ -38,6 +38,14 @@ AF_DCMotor Motor1(1, MOTOR12_64KHZ);
 AF_DCMotor Motor2(4, MOTOR12_64KHZ);
 
 
+void forward(){
+  Motor1.setSpeed(SX);
+  Motor2.setSpeed(DX); // they sould be equal, but one engine is less powerful
+  Motor1.run(FORWARD);
+  Motor2.run(FORWARD);
+}
+
+
 void right(double x){
   Motor1.setSpeed(0);
   Motor2.setSpeed(0);
