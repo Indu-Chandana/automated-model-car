@@ -85,6 +85,13 @@ void brake(){
   Motor2.run(BRAKE);
 }
 
+void brakeFront(){
+  Motor1.setSpeed(0);
+  Motor2.setSpeed(0);
+  Motor1.run(BRAKE);
+  Motor2.run(BRAKE);
+}
+
 void back(){
   Motor1.setSpeed(SX);
   Motor2.setSpeed(DX); // they sould be equal, but one engine is less powerful
